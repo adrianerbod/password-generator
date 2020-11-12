@@ -1,0 +1,136 @@
+/*global*/
+:root {
+  --card-color: #f0f1f7;
+  --text-color: #2e284c;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(90deg, #aac7f9, #6e83dd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/*outside the form*/
+.container {
+  width: 500px;
+  max-width: 95%;
+}
+.card {
+  background-color: var(--card-color);
+  color: var(--text-color);
+  width: 100%;
+  padding: 1.7rem;
+  border-radius: 10px;
+  box-shadow: 2px 7px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.link {
+  position: absolute;
+  bottom: 0.3rem;
+  left: 50%;
+  transform: translatex(-50%);
+  text-decoration: none;
+  color: #747474;
+  font-size: 12px;
+}
+.card h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 20px;
+}
+/*form*/
+.password_form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.output {
+  display: block;
+  background-color: #333333;
+  color: var(--card-color);
+  text-align: center;
+  font-size: 20px;
+  padding: 1rem 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+.output::selection {
+  background-color: transparent;
+}
+.info {
+  margin: 1rem 0 0.5rem 0;
+  text-align: center;
+  font-size: 12px;
+  color: #0069d9;
+}
+.success {
+  color: #218838;
+}
+.warning {
+  color: red;
+}
+.password_length {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+  padding: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.input_length {
+  width: 25%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 20px;
+}
+.btn_generate {
+  background: #6e83dd;
+  color: var(--card-color);
+  width: 50%;
+  margin: 1rem auto;
+  padding: 0.6rem 0;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s all linear;
+}
+.btn_generate:hover {
+  background-color: #2e284c;
+}
+/*popup*/
+.popup_container {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.popup_content {
+  width: 300px;
+  max-width: 95%;
+  background-color: var(--card-color);
+  padding: 2rem;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.show {
+  display: flex;
+}
